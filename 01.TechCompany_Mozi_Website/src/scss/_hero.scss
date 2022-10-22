@@ -1,0 +1,226 @@
+.hero__wrapper {
+    background: linear-gradient(252.91deg, #E3E7F6 3.68%, rgba(227, 231, 246, 0) 97.82%);
+}
+
+.section {
+
+    // .section__hero
+    &__hero {
+        padding: 129px 0 210px 0;
+        position: relative;
+
+        @media (max-width: $breakpoint1400) {
+            padding: 100px 0;
+
+        }
+
+        @media (max-width: $breakpoint992) {
+            padding: 50px 0 275px 0;
+
+        }
+
+
+        @media (max-width: $breakpoint480) {
+            padding: 35px 0 250px 0;
+        }
+
+        //.hero__img
+        .hero__img {
+            position: absolute;
+            bottom: 0;
+            right: 75px;
+
+            @media (max-width: $breakpoint1400) {
+                max-width: 400px;
+                right: 0;
+            }
+
+            @media (max-width: $breakpoint768) {
+                max-width: 320px;
+            }
+
+        }
+
+        &.section__hero-products {
+            padding-top: 170px;
+            padding-bottom: 150px;
+
+            @media (max-width: $breakpoint1400) {
+                padding: 100px 0;
+            }
+
+            @media (max-width: $breakpoint992) {
+                padding: 50px 0 325px 0;
+
+            }
+
+            @media (max-width: $breakpoint768) {
+                padding: 35px 0 275px 0;
+            }
+
+            .hero__img {
+                right: 120px;
+
+                @media (max-width: $breakpoint1400) {
+                    max-width: 500px;
+                    right: 30px;
+                }
+
+                @media (max-width: $breakpoint992) {
+                    max-width: 400px;
+                }
+
+                @media (max-width: $breakpoint768) {
+                    max-width: 320px;
+                }
+            }
+        }
+
+        &.section__hero-about {
+            padding-top: 189px;
+            padding-bottom: 212px;
+
+            @media (max-width: $breakpoint1400) {
+                padding: 100px 0;
+            }
+
+            @media (max-width: $breakpoint992) {
+                padding: 50px 0 395px 0;
+
+            }
+
+            @media (max-width: $breakpoint768) {
+                padding: 35px 0 300px 0;
+            }
+
+            .hero__img {
+                right: 120px;
+
+                @media (max-width: $breakpoint1400) {
+                    max-width: 500px;
+                    right: 30px;
+                }
+
+                @media (max-width: $breakpoint992) {
+                    max-width: 400px;
+                }
+
+                @media (max-width: $breakpoint768) {
+                    max-width: 275px;
+                    right: 0;
+                }
+            }
+
+            .hero__item {
+                max-width: 400px;
+
+                @media (max-width: $breakpoint992) {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    gap: 30px;
+
+    // .hero__item
+    &__item {
+        flex: 0 1 50%;
+
+        @media (max-width: $breakpoint992) {
+            flex: 1 1 100%;
+        }
+    }
+
+    // .hero__item-title
+    &__item-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 62px;
+        color: $blueColor;
+
+        @media (max-width: $breakpoint992) {
+            font-size: 38px;
+            line-height: 48px;
+            text-align: center;
+        }
+
+        span {
+            color: $redColor;
+        }
+
+        @media (max-width: $breakpoint768) {
+            font-size: 32px;
+            line-height: 42px;
+        }
+
+    }
+
+    // .hero__item-text
+    &__item-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 33px;
+        color: $grayColor;
+        margin-top: 32px;
+
+        @media (max-width: $breakpoint992) {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        @media (max-width: $breakpoint768) {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+
+    }
+
+    // .hero__item-buttons
+    &__item-buttons {
+        margin-top: 20px;
+
+        @media (max-width: $breakpoint992) {
+            display: flex;
+            justify-content: center;
+        }
+
+        @media (max-width: $breakpoint480) {
+            flex-direction: column;
+            margin-top: 0;
+        }
+    }
+
+    // .hero__btn
+    &__btn {
+        margin-top: 20px;
+
+        @media (max-width: $breakpoint480) {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        &:last-child {
+            margin-left: 16px;
+
+            @media (max-width: $breakpoint480) {
+                margin-left: 0;
+
+            }
+        }
+    }
+
+    .hero__career-btn {
+        @media (max-width: $breakpoint480) {
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+}

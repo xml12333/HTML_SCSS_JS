@@ -1,0 +1,45 @@
+.section {
+
+    // .section__brands
+    &__brands {
+        padding: 101px 0 128px 0;
+        border-bottom: 1px solid rgba(197, 203, 226, 0.5);
+    }
+
+}
+
+.body__about{
+    .section__brands{
+        border-bottom: none;
+    }
+}
+.section__title-brands{
+    font-size: 36px;
+    line-height: 57px;
+}
+.brands {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    @media (max-width: $breakpoint992) {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    // .brands__item
+    &__item {
+        margin-top: 20px;
+        @media (max-width: $breakpoint992) {
+            display: flex;
+            flex: 0 0 20%;
+            justify-content: center;
+        }   
+        @media (max-width: $breakpoint768) {
+            flex: 0 0 30%;
+            margin-top: 0;
+        }
+        
+    }
+}

@@ -1,0 +1,137 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body Locked
+body {
+    font-family: 'Author', sans-serif;
+
+    &.locked {
+        overflow: hidden;
+    }
+}
+
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.section {
+
+    // .section__title
+    &__title {
+        font-style: normal;
+        font-weight: 494;
+        font-size: 50px;
+        line-height: 56px;
+        color: $blue;
+    }
+
+    // .section__text
+    &__text {
+        font-style: normal;
+        font-weight: 375;
+        font-size: 20px;
+        line-height: 22px;
+        color: $gray;
+        max-width: 600px;
+
+    }
+}
+
+.btn {
+    background: $red;
+    padding: 18px 48px;
+    display: inline-flex;
+    gap: 40px;
+    align-items: center;
+    font-style: normal;
+    font-weight: 494;
+    font-size: 22px;
+    line-height: 24px;
+    color: $white;
+    transition: .3s all ease;
+    max-width: fit-content;
+
+    &:hover {
+        background: rgb(192, 5, 5);
+
+        svg {
+            transform: translate(10px);
+            transition: .3s all ease;
+        }
+    }
+}
+
+.btn__outline {
+    padding: 18px 48px;
+    border: 1px solid $lightgray;
+    display: inline-flex;
+    font-style: normal;
+    font-weight: 494;
+    font-size: 22px;
+    line-height: 24px;
+    color: $blue;
+    background: $white;
+    transition: .3s all ease;
+
+    &:hover {
+        background: $blue;
+        color: $white;
+        transition: .3s all ease;
+    }
+}
+
+.logo {
+    padding-bottom: 89px;
+}
+
+main {
+    padding: 50px 200px;
+}
+
+// .section__title {
+//     color: $primary;
+//     font-style: normal;
+//     font-weight: 700;
+//     font-size: 36px;
+//     line-height: 44px;
+
+//     @media  (max-width: $breakpoint992) {
+//         font-size: 32px;
+//         line-height: 120%;
+//     }
+// }
+// .section__subtitle {
+//     color: $secondary;
+//     margin-top: 15px;
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 14px;
+//     line-height: 24px;
+// }

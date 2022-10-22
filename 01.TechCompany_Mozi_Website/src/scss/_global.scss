@@ -1,0 +1,144 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body Locked
+body {
+    font-family: 'Europa', sans-serif;
+
+    &.locked {
+        overflow: hidden;
+    }
+}
+
+.section {
+    @media (max-width: $breakpoint992) {
+        padding: 75px 0;
+    }
+
+    @media (max-width: $breakpoint768) {
+        padding: 50px 0;
+    }
+
+
+}
+
+.section__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 62px;
+    color: $blueColor;
+
+    &.title__center {
+        text-align: center;
+    }
+
+    @media (max-width: $breakpoint992) {
+        font-size: 32px;
+        line-height: 50px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        font-size: 26px;
+        line-height: 42px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    span {
+        color: $redColor;
+    }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.btn {
+    background: $redColor;
+    color: $whiteColor;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: bold;
+    display: inline-block;
+
+    @media (max-width: $breakpoint992) {
+        padding: 12px 26px;
+    }
+
+
+    &:hover {
+        background: #a71031;
+        transition: 0.3s all ease;
+    }
+
+}
+
+.btn__outline {
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: bold;
+    display: inline-block;
+    border: 1px solid $redColor;
+    color: $redColor;
+
+    @media (max-width: $breakpoint992) {
+        padding: 12px 26px;
+    }
+
+    &:hover {
+        color: $whiteColor;
+        background: $redColor;
+        transition: 0.3s all ease;
+    }
+}
+
+// .section__subtitle
+.section__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 16px;
+    line-height: 27px;
+    color: $grayColor;
+
+    &.subtitle__center {
+        text-align: center;
+    }
+}
+
+.about__wrapper {
+    background: linear-gradient(268.52deg, #E3E7F6 -52.27%, rgba(227, 231, 246, 0) 138.23%);
+}

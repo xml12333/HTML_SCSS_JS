@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+    // .header__item
+    &__item {
+        flex: 0 1 50%;
+
+        &.image__item {
+            background: url('../img/bg.jpg') center / cover no-repeat;
+        }
+
+        &.info__item {
+            padding: 65px 100px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
+
+
+
+.header__btn {
+    margin-top: 40px;
+    padding: 18px 30px;
+}
+
+.link {
+    font-style: normal;
+    font-weight: 375;
+    font-size: 18px;
+    line-height: 20px;
+    color: $gray;
+    margin-top: auto;
+
+    a {
+        color: $red;
+    }
+}

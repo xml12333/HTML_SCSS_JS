@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Index</title>
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="body__main">
+    <!-- Header -->
+    <div class="hero__wrapper">
+      @@include('./html/_header.html')
+      <!-- Hero -->
+      @@include('./html/MainPage/_hero.html')
+    </div>
+    <!-- Main Page -->
+    <main>
+      <!-- Brands -->
+      @@include('./html/_brands.html')
+
+      <!-- Products -->
+      @@include('./html/MainPage/_products.html')
+
+      <!-- Info1 -->
+      @@include('./html/MainPage/_info1.html')
+
+      <!-- Innovation -->
+      @@include('./html/MainPage/_innovation.html')
+
+      <!-- Info2 -->
+      @@include('./html/MainPage/_info2.html')
+    </main>
+
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+  </body>
+
+  <script src="./js/scripts.min.js"></script>
+</html>

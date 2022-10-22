@@ -1,0 +1,32 @@
+.finish {
+    display: none;
+    // .finish__logo
+    &__logo {
+        margin-top: 50px;
+    }
+
+    // .finish__title
+    &__title {
+        margin-top: 40px;
+        font-style: normal;
+        font-weight: 494;
+        font-size: 50px;
+        line-height: 56px;
+        color: $blue;
+    }
+
+    // .finish__text
+    &__text {
+        margin-top: 10px;
+        font-style: normal;
+        font-weight: 375;
+        font-size: 20px;
+        line-height: 22px;
+
+        color: $gray;
+    }
+}
+
+.finish__btn{
+    margin-top: 60px;
+}

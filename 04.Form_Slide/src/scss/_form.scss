@@ -1,0 +1,140 @@
+.steps {
+
+    // .steps__form
+    &__form {}
+
+    // .steps__numbers
+    &__numbers {
+        display: flex;
+        align-items: center;
+        position: relative;
+        max-width: 500px;
+        margin-bottom: 60px;
+    }
+}
+
+.progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: $lightgray;
+    z-index: -1;
+    
+
+    // .progress__success
+    &__success {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 2px;
+        background: $red;
+        transition: 1s all ease;
+    }
+}
+
+.step {
+
+    // .step__number
+    &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        border: 2px solid $lightgray;
+        margin-right: 100px;
+        flex-shrink: 0;
+        background: $white;
+        &.active__number{
+            background: $red;
+            border: transparent;
+            transition: 1s all ease;
+            path{
+                fill: $white;
+                transition: 1s all ease;
+            }
+        }
+    }
+
+    // .step__buttons
+    &__buttons {
+        margin-top: 80px;
+        gap: 20px;
+        display: flex;
+    }
+}
+
+.form {
+
+    // .form__step
+    &__step {
+        display: none;
+        &.active{
+            display: initial;
+        }
+    }
+
+    // .form__input
+    &__input {
+        display: flex;
+        position: relative;
+        border: 1px solid $lightgray;
+        max-width: 460px;
+
+        &.search__input {
+            margin-top: 40px;
+        }
+    }
+}
+
+.button {}
+
+.prev {
+
+    // .prev__step
+    &__step {}
+}
+
+.next {
+
+    // .next__step
+    &__step {}
+}
+
+.input {
+    padding: 20px 20px 20px 65px;
+    width: 100%;
+    outline: none;
+    font-style: normal;
+    font-weight: 375;
+    font-size: 18px;
+    line-height: 20px;
+    color: $gray;
+
+    &:focus {
+        outline: 1px solid $red;
+    }
+
+    &__img {
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+.form {
+    &__item {}
+
+    &__item-title {
+        font-style: normal;
+        font-weight: 494;
+        font-size: 25px;
+        line-height: 28px;
+        color: $blue;
+        margin-top: 40px;
+    }
+}

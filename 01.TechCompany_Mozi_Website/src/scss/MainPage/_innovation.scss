@@ -1,0 +1,77 @@
+.section {
+
+    // .section__innovation
+    &__innovation {
+        padding-top: 120px;
+        padding-bottom: 130px;
+    }
+}
+
+.containter {}
+
+.swiper {
+
+    // .swiper__innovation
+    &__innovation {
+        margin-top: 70px;
+
+        @media (max-width:$breakpoint992) {
+            margin-top: 0px;
+        }
+
+        .swiper-slide {
+            box-shadow: 0px 0px 8px rgba(22, 23, 72, 0.07), 0px 25px 35px rgba(22, 23, 72, 0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 119px;
+        }
+    }
+}
+
+.swiper-wrapper {
+    padding: 45px 0;
+    display: flex;
+    align-items: center;
+}
+
+.swiper {
+
+    // .swiper__arrows
+
+    &__arrows {
+        display: flex;
+        align-items: center;
+        @media (max-width: $breakpoint768) {
+         display: none;
+        }
+    }
+
+    // .swiper__arrow
+
+    &__arrow {
+        background: none;
+        display: flex;
+
+        &.swiper-button-disabled {
+            svg {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    // .swiper__arrow-prev
+
+    &__arrow-prev {
+        transform: rotate(180deg);
+    }
+
+    // .swiper__arrow-next
+
+    &__arrow-next {
+        margin-left: 4px;
+    }
+
+
+}

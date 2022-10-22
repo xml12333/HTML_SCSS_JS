@@ -1,0 +1,44 @@
+.iterests {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.interest {
+
+    // .interest__item
+    &__item {
+        display: flex;
+        padding: 15px 24px;
+        background: $white;
+        border: 1px solid $lightgray;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    // .interest__checkbox
+    &__checkbox {
+        display: none;
+        &:checked ~ .interest__text{
+            color: $blue;
+        }
+        &:checked ~ .interest__border{
+            opacity: 1;
+        }
+    }
+
+    // .interest__text
+    &__text {
+        font-style: normal;
+        font-weight: 494;
+        font-size: 18px;
+        line-height: 20px;
+        color: $gray;
+    }
+
+    &__border{
+        position: absolute;
+        inset: 0;
+        border: 1px solid $blue;
+        opacity: 0;
+    }
+}
