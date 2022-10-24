@@ -1,144 +1,139 @@
-.section__hero {
-    padding-bottom: 86px;
-    position: relative;
+.section {
 
-    @media (max-width: $breakpoint992) {
-        padding-bottom: 400px;
-    }
-    @media (max-width: $breakpoint768) {
-        padding-bottom: 450px;
-    }
-    .header__img {
+    // .section__hero
+    &__hero {}
+}
+
+.header__wrapper {
+    height: 100vh;
+    width: 100%;
+    background: $primary;
+    position: relative;
+    overflow: hidden;
+
+    .hero__img {
         position: absolute;
         right: 0;
-        top: 0;
-        max-width: 880px;
-        width: 100%;
-        z-index: -1;
+        bottom: -60px;
+        max-width: 650px;
 
         @media (max-width: $breakpoint1200) {
-            max-width: 600px;
-        }
-        @media (max-width: $breakpoint992) {
-            top: unset;
+            max-width: 500px;
             bottom: 0;
         }
+
+        @media (max-width: $breakpoint992) {
+            max-width: 420px;
+        }
         @media (max-width: $breakpoint480) {
-            bottom: 100px;
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .hero__gradient {
+        position: absolute;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(57, 139, 255, 0.324) 0%, rgba(57, 139, 255, 0.24) 20.83%, rgba(57, 139, 255, 0) 100%);
+        opacity: 0.75;
+        right: 116px;
+        bottom: -260px;
+        width: 869px;
+        height: 869px;
+        @media (max-width: $breakpoint768) {
+            right: -220px;
         }
     }
 }
 
-.hero__title {
-    padding-top: 100px;
-    color: $primary;
-    max-width: 387px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 62px;
+.hero {
 
-    @media (max-width: $breakpoint1200) {
-        padding-top: 75px;
-    }
-    @media (max-width: $breakpoint992) {
-        padding-top: 50px;
-        font-size: 36px;
-        line-height: 120%;
-        max-width: 100%;
-    }
-    @media (max-width: $breakpoint480) {
-        font-size: 28px;
-    }
-}
-.hero__subtitle {
-    margin-top: 15px;
-    color: $secondary;
-    max-width: 500px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 28px;
+    // .hero__title
+    &__title {
+        padding-top: 106px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 95%;
+        letter-spacing: -0.04em;
+        color: #FFFFFF;
+        max-width: 715px;
 
-    @media (max-width: $breakpoint992) {
-        max-width: 100%;
-    }
-}
-.hero__buttons {
-    margin-top: 30px;
+        @media (max-width: $breakpoint992) {
+            max-width: 100%;
+            font-size: 52px;
+            padding-top: 75px;
+        }
 
-    @media (max-width: $breakpoint480) {
+        @media (max-width: $breakpoint768) {
+            font-size: 38px;
+            line-height: 110%;
+            padding-top: 35px;
+            text-align: center;
+        }
+        @media (max-width: $breakpoint480) {
+            font-size: 32px;
+        }
+    }
+
+    // .hero__btns
+    &__btns {
+        margin-top: 34px;
         display: flex;
-        flex-direction: column;
-        margin-top: 0;
-    }
-}
+        align-items: center;
 
-.hero__btn {
-    @media (max-width: $breakpoint480) {
-        justify-content: center;
-        margin-top: 20px;
+        @media (max-width: $breakpoint768) {
+            justify-content: center;
+            margin-top: 24px;
+        }
+        @media (max-width: $breakpoint480) {
+            flex-direction: column;
+            margin-top: 14px;
+        }
+        .hero__btn{
+            @media (max-width: $breakpoint480) {
+                width: 100%;
+                margin-top: 10px;
+                text-align: center;
+            }   
+        }
     }
-}
-.hero__stats-title {
-    margin-top: 130px;
-    color: $secondaryLight;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 
-    @media (max-width: $breakpoint1200) {
-        margin-top: 75px;
+    // .hero__span
+    &__span {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 145%;
+        color: rgba(255, 255, 255, 0.35);
+        margin: 0 14px;
+        @media (max-width: $breakpoint480) {
+            display: none;
+        }
     }
-    @media (max-width: $breakpoint992) {
-        margin-top: 50px;
-        line-height: 120%;
-    }
-}
-.hero__stats {
-    display: flex;
-    gap: 80px;
 
-    @media (max-width: $breakpoint992) {
-        gap: 50px;
-    }
-    @media (max-width: $breakpoint480) {
-        gap: 25px;
-    }
-}
-
-.hero__stats-item--num {
-    margin-top: 35px;
-    color: $primary;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 36px;
-    text-align: center;
-
-    @media (max-width: $breakpoint992) {
-        font-size: 26px;
-        line-height: 100%;
-    }
-    @media (max-width: $breakpoint480) {
+    // .hero__text
+    &__text {
+        margin-top: 36px;
+        font-style: normal;
+        font-weight: 400;
         font-size: 22px;
-    }
+        line-height: 145%;
+        color: #AAC0E0;
+        max-width: 533px;
 
-}
-.hero__stats-item--text {
-    margin-top: 12px;
-    color: $secondary;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    text-transform: uppercase;
+        @media (max-width: $breakpoint992) {
+            max-width: 100%;
+            font-size: 20px;
+        }
 
-    @media (max-width: $breakpoint480) {
-        margin-top: 5px;
-        font-size: 12px;
+        @media (max-width: $breakpoint768) {
+            text-align: center;
+            margin-top: 26px;
+        }
+        @media (max-width: $breakpoint480) {
+            margin-top: 16px;
+            font-size: 18px;
+        }
     }
 }
