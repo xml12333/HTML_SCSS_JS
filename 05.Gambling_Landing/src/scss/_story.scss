@@ -1,0 +1,122 @@
+.section {
+
+    // .section__story
+    &__story {
+        margin-top: -62px;
+
+        @media (max-width: $breakpoint992) {
+            margin-top: 0;
+            padding: 35px 0;
+        }
+    }
+}
+
+.story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    // .story__item
+    @media (max-width: $breakpoint1200) {
+        gap: 40px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        flex-wrap: wrap-reverse;
+        gap: 0;
+    }
+
+    &__item {
+        &.left__item {
+            flex: 0 1 800px;
+
+            @media (max-width: $breakpoint1200) {
+                flex: 0 1 60%;
+            }
+
+            @media (max-width: $breakpoint992) {
+                flex: 0 1 100%;
+                padding-top: 35px;
+            }
+            @media (max-width: $breakpoint480) {
+             padding-top: 25px;
+            }
+        }
+
+        &.right__item {
+            flex: 0 1 366px;
+
+            @media (max-width: $breakpoint1200) {
+                flex: 0 1 40%;
+            }
+
+            @media (max-width: $breakpoint992) {
+                flex: 0 1 100%;
+            }
+        }
+    }
+
+    // .story__item-video
+    &__item-video {
+        border-radius: 12px;
+        position: relative;
+        border: 3px solid #000000;
+
+        .video__poster {
+            border-radius: 12px;
+
+            @media (max-width: $breakpoint1200) {
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .play__btn {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -30%);
+            cursor: pointer;
+            @media (max-width: $breakpoint480) {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    // .story__video
+    &__video {}
+
+    // .story__item-title
+    &__item-title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 110%;
+        letter-spacing: -0.03em;
+        color: $primary;
+
+        @media (max-width: $breakpoint1200) {
+            padding-top: 70px;
+        }
+        @media (max-width: $breakpoint992) {
+            padding-top: 0;
+        }
+    }
+
+    // .story__item-text
+    &__item-text {
+        padding-top: 18px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        color: $primary;
+        opacity: 0.75;
+        @media (max-width: $breakpoint992) {
+            padding-top: 10px;
+        }
+    }
+}
