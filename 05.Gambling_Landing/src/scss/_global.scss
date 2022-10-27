@@ -84,6 +84,21 @@ body {
     }
 }
 
+//section__text
+.section__text {
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    color: rgba(0, 23, 49, 0.55);
+    @media (max-width: $breakpoint768) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
 
 // Animations
 // Fade
