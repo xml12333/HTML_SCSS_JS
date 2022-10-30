@@ -7,3 +7,4 @@
 |02| [Parcel_Landing](https://github.com/xml12333/HTML_SCSS_JS/tree/main/02.Parcel_Landing)| [Demo](https://nikt.com.ua/projects/htmlScssJs/02.Parcel_Landing/)| ![Thumbnail](02.Parcel_Landing/info/info_thumbnail.jpg)|
 |03| [Snikpic_Landing](https://github.com/xml12333/HTML_SCSS_JS/tree/main/03.Snikpic_Landing)| [Demo](https://nikt.com.ua/projects/htmlScssJs/03.Snikpic_Landing/)| ![Thumbnail](03.Snikpic_Landing/info/info_thumbnail.jpg)|
 |04| [Form_Slide](https://github.com/xml12333/HTML_SCSS_JS/tree/main/04.Form_Slide)| [Demo](https://nikt.com.ua/projects/htmlScssJs/04.Form_Slide/)| ![Thumbnail](04.Form_Slide/info/info_thumbnail.jpg)|
+|05| [Gambling_Landing](https://github.com/xml12333/HTML_SCSS_JS/tree/main/05.Gambling_Landing)| [Demo](https://nikt.com.ua/projects/htmlScssJs/05.Gambling_Landing/)| ![Thumbnail](05.Gambling_Landing/info/info_thumbnail.jpg)|
