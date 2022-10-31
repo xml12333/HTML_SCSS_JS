@@ -1,0 +1,101 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body Locked
+body {
+    font-family: $fontMain;
+
+    &.locked {
+        overflow: hidden;
+    }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.btn {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    transition: .3s ease;
+    @media (max-width: $breakpoint1450){
+        font-size: 16px;
+    }
+    // .btn__outline
+    &__outline {
+        color: $primary;
+        &:hover{
+            color:$secondary;
+        }
+
+    }
+
+    // .btn__primary
+    &__primary {
+        color: $white;
+        background: $primary;
+        &:hover{
+            background-color: $primaryDark;
+        }
+    }
+
+    // .btn__secondary
+    &__secondary {}
+}
+
+
+
+.section__title {
+    color: $primary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+
+    @media (max-width: $breakpoint992) {
+        font-size: 32px;
+        line-height: 120%;
+    }
+}
+
+.section__subtitle {
+    color: $secondary;
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
