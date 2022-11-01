@@ -1,0 +1,121 @@
+.menu {
+    display: flex;
+    gap: 60px;
+    margin-left: 65px;
+    align-items: center;
+
+    @media (max-width: $breakpoint1450) {
+        gap: 25px;
+        margin-left: 40px;
+    }
+
+    @media (max-width: $breakpoint992) {
+        margin-left: 0;
+    }
+
+    // .menu__item
+    &__item {
+        &.with__submenu {
+            position: relative;
+            display: flex;
+            align-items: center;
+            @media (max-width: $breakpoint992){
+                flex-direction: column;
+            }
+
+            .submenu {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 25px;
+                background: $primary;
+                display: none;
+
+                &.active {
+                    display: block;
+                    animation: fade .3s linear;
+                    @media (max-width: $breakpoint992){
+                        position: static;
+                        padding-top: 15px;
+                    }
+                }
+
+                // .submenu_item
+                &_item {}
+
+                // .submenu__link
+                &__link {
+                    color: $white;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 20px;
+                    display: flex;
+                    padding: 15px;
+                    transition: .3s ease background;
+                    @media (max-width: $breakpoint992){
+                        font-size: 16px;
+                        padding: 10px;
+                    }
+
+                    &:hover {
+                        background: $secondary;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    // .menu__item-link
+    &__item-link {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $primaryDark;
+        transition: .3s ease color;
+        display: flex;
+        align-items: center;
+        @media (max-width: $breakpoint1450) {
+            font-size: 14px;
+
+        }
+
+        &:hover {
+            color: $secondary;
+        }
+
+        &.trigger__link {
+            &.active {
+                color: $secondary;
+                .submenu__path{
+                    fill: $secondary
+                }
+            }
+            &:hover{
+                .submenu__path{
+                    fill: $secondary;
+                    transition: .3s ease fill;
+                }
+            }
+        }
+
+        .submenu__arrow {
+            transform: rotate(0);
+            transition: .3s ease transform;
+            display: flex;
+
+            &.active {
+                transform: rotate(180deg);
+            }
+            .submenu__path{
+                @media (max-width: $breakpoint992){
+                    fill: $secondary;
+                }
+            }
+        }
+    }
+}
