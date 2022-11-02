@@ -52,7 +52,8 @@ body {
     padding: 15px 0;
     transition: .3s ease;
     @media (max-width: $breakpoint1450){
-        font-size: 16px;
+        font-size: 14px;
+        padding: 10px 15px;
     }
     // .btn__outline
     &__outline {

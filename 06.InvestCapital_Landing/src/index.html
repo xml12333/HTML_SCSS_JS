@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
-    <link rel="stylesheet" href="./css/style.min.css">
-</head>
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
 
-<body class="main__body">
-    <!-- Header -->
-    @@include('./html/_header.html')
-
+  <body class="main__body">
+    <div class="header__wrapper">
+      <img src="./img/hero.jpg" alt="hero" class="hero__img" />
+      <!-- Header -->
+      @@include('./html/_header.html')
+      <!-- Hero -->
+      @@include('./html/_hero.html')
+    </div>
     <!-- Main Page -->
     <main>
-        <!-- Hero -->
-        <!-- @@include('./html/_hero.html') -->
+      <!-- Special -->
+      <!-- @@include('./html/_special.html') -->
 
-        <!-- Special -->
-        <!-- @@include('./html/_special.html') -->
+      <!-- Trusted -->
+      <!-- @@include('./html/_trusted.html') -->
 
-        <!-- Trusted -->
-        <!-- @@include('./html/_trusted.html') -->
-
-        <!-- Support -->
-        <!-- @@include('./html/_support.html') -->
-
+      <!-- Support -->
+      <!-- @@include('./html/_support.html') -->
     </main>
 
     <!-- Footer -->
     <!-- @@include('./html/_footer.html') -->
+  </body>
 
-</body>
-
-<script src="./js/scripts.min.js"></script>
-
+  <script src="./js/scripts.min.js"></script>
 </html>
