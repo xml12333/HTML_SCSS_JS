@@ -2,6 +2,12 @@
     position: relative;
     padding-bottom: 250px;
     overflow: hidden;
+    @media (max-width: $breakpoint1200){
+        padding-bottom: 150px;
+    }
+    @media (max-width: $breakpoint375){
+        padding-bottom: 50px;
+    }
     .hero__img {
         position: absolute;
         right: 0;

@@ -1,0 +1,101 @@
+.section {
+
+    // .section__statistic
+    &__statistic {
+        padding: 50px 0;
+        @media (max-width: $breakpoint375){
+            padding: 35px 0;
+        }
+    }
+}
+
+.statistic {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint768) {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    // .statistic__item
+    &__item {
+        flex: 0 1 315px;
+
+        @media (max-width: $breakpoint768) {
+            flex: 0 1 100%;
+        }
+
+        &:nth-child(2) {
+            position: relative;
+
+            &::after {
+                position: absolute;
+                left: 0;
+                top: 15px;
+                bottom: 15px;
+                width: 2px;
+                background: $primary;
+                content: '';
+
+                @media (max-width: $breakpoint768) {
+                    display: none;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                top: 15px;
+                bottom: 15px;
+                right: 0;
+                width: 2px;
+                background: $primary;
+                content: '';
+
+                @media (max-width: $breakpoint768) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // .statistic__title
+    &__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        text-transform: capitalize;
+        color: $primary;
+        text-align: center;
+
+        @media (max-width: $breakpoint1450) {
+            font-size: 32px;
+            line-height: 1;
+        }
+        @media (max-width: $breakpoint768) {
+            font-size: 28px;
+        }
+
+    }
+
+    // .statistic__text
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: $primary;
+        margin-top: 4px;
+        text-align: center;
+
+        @media (max-width: $breakpoint1450) {
+            font-size: 20px;
+        }
+        @media (max-width: $breakpoint768) {
+            font-size: 18px;
+        }
+    }
+}
