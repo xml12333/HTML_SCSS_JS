@@ -1,0 +1,139 @@
+.section {
+    &__offers {
+        padding: 50px 0;
+    }
+
+}
+
+.offers {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    margin-top: 20px;
+
+    @media (max-width: $breakpoint1450) {
+        justify-content: center;
+    }
+
+    @media (max-width: $breakpoint768) {
+        gap: 0;
+    }
+
+    // .offers__item
+    &__item {
+        flex: 0 1 300px;
+        margin-top: 30px;
+        border: 1px solid #e8e5e2;
+
+        @media (max-width: $breakpoint768) {
+            flex: 0 1 100%;
+            margin-top: 20px;
+        }
+    }
+}
+
+.offer {
+
+    // .offer__img
+    &__img {
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    // .offer__body
+    &__body {
+        padding: 15px;
+    }
+
+    // .offer__title
+    &__title {
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: $black;
+
+        img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 100%;
+        }
+    }
+
+    // .offer__text
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: $black;
+        margin-top: 15px;
+    }
+
+    // .offer__btn
+    &__btn {
+        display: flex;
+        align-items: center;
+        background: $neutralLight;
+        padding: 6px;
+        width: 60px;
+        justify-content: flex-end;
+        margin-left: auto;
+        transition: .3s ease;
+
+        @media (max-width: $breakpoint768) {}
+
+        &:hover {
+            width: 100%;
+
+            .offer__btn-text {
+                display: block;
+            }
+
+            .offer__arrow {
+                transform: rotate(45deg);
+                transition: .3s ease transform;
+            }
+        }
+    }
+
+    // .offer__btn-text
+    &__btn-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: $black;
+        display: none;
+        animation: fade 1s linear;
+    }
+
+    // .offer__btn-img
+    &__btn-img {}
+
+    // .offer__arrow
+    &__arrow {
+        transform: rotate(0);
+        transition: .3s ease transform;
+    }
+}
+
+//.offers__text
+.offers__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    color: $black;
+    margin-top: 50px;
+}

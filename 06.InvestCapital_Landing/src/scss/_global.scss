@@ -51,15 +51,18 @@ body {
     align-items: center;
     padding: 15px 0;
     transition: .3s ease;
-    @media (max-width: $breakpoint1450){
+
+    @media (max-width: $breakpoint1450) {
         font-size: 14px;
         padding: 10px 15px;
     }
+
     // .btn__outline
     &__outline {
         color: $primary;
-        &:hover{
-            color:$secondary;
+
+        &:hover {
+            color: $secondary;
         }
 
     }
@@ -68,7 +71,8 @@ body {
     &__primary {
         color: $white;
         background: $primary;
-        &:hover{
+
+        &:hover {
             background-color: $primaryDark;
         }
     }
@@ -79,24 +83,62 @@ body {
 
 
 
-.section__title {
-    color: $primary;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
 
-    @media (max-width: $breakpoint992) {
-        font-size: 32px;
-        line-height: 120%;
+.section {
+
+    // .section__title
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 59px;
+        text-transform: capitalize;
+        color: $primary;
+        @media (max-width: $breakpoint1450){
+            font-size: 42px;
+        }
+        @media (max-width: $breakpoint992){
+            font-size: 34px;
+        }
+        @media (max-width: $breakpoint768){
+            font-size: 28px;
+        }
+        @media (max-width: $breakpoint480){
+            font-size: 24px;
+            line-height: 1.2;
+        }
+        &.title__center {
+            text-align: center;
+        }
+
+        &.title__secondary {
+            color: $white;
+        }
     }
-}
 
-.section__subtitle {
-    color: $secondary;
-    margin-top: 15px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
+    // .section__subtitle
+    &__subtitle {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: 0.3px;
+        color: $black;
+        margin-top: 15px;
+        @media (max-width: $breakpoint768){
+            margin-top: 0;
+        }
+        @media (max-width: $breakpoint480){
+            margin-top: 15px;
+        }
+        &.subtitle__center {
+            text-align: center;
+        }
+
+        &.subtitle__secondary {
+            color: $white;
+        }
+    }
+
 }
