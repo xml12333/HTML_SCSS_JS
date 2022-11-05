@@ -78,7 +78,10 @@ body {
     }
 
     // .btn__secondary
-    &__secondary {}
+    &__secondary {
+        color: $white;
+        background: $secondary;
+    }
 }
 
 
@@ -122,7 +125,6 @@ body {
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
-        text-align: center;
         letter-spacing: 0.3px;
         color: $black;
         margin-top: 15px;

@@ -1,0 +1,62 @@
+.section {
+
+    // .section__about
+    &__about {
+        background: $primary;
+        padding: 80px 0;
+        @media (max-width: $breakpoint768) {
+            padding: 50px 0;
+        }
+    }
+
+
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 30px;
+    @media (max-width: $breakpoint992){
+        margin-top: 0;
+    }
+    @media (max-width: $breakpoint768){
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    // .about__item
+    &__item {
+        flex: 0 1 380px;
+        background: $white;
+        padding: 35px;
+        margin-top: 30px;
+        border-top: 6px solid $secondary;
+        @media (max-width: $breakpoint992){
+            padding: 25px;
+        }
+        @media (max-width: $breakpoint768){
+            flex: 0 1 100%;
+            margin-top: 20px;
+        }
+    }
+
+    // .about__title
+    &__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: $primaryDark;
+    }
+
+    // .about__text
+    &__text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.3px;
+        color: $black;
+        margin-top: 8px;
+    }
+}

@@ -1,0 +1,11 @@
+.section {
+    // .section__vision
+    &__vision {
+        background: $primary;
+        padding: 80px 0;
+        @media (max-width: $breakpoint768){
+            padding: 50px 0;
+        }
+    }
+  
+}
