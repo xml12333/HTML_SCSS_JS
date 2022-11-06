@@ -1,0 +1,20 @@
+.section {
+    // .section__action
+    &__action {
+        padding: 80px 0;
+        @media (max-width: $breakpoint768){
+            padding: 50px 0;
+        }
+    }
+}
+.action {
+    // .action__btn
+    &__btn {
+        max-width: 450px;
+        margin: 0 auto;
+        margin-top: 50px;
+        @media (max-width: $breakpoint1450){
+            margin-top: 35px;
+        }
+    }
+}

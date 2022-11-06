@@ -42,3 +42,30 @@ function submenu() {
   });
 }
 submenu();
+
+//Swiper
+const swiper = new Swiper(".swiper", {
+  spaceBetween: 60,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: ".next__btn",
+    prevEl: ".prev__btn",
+  },
+
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
+});
