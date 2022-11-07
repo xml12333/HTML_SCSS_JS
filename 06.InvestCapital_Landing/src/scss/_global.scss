@@ -81,6 +81,9 @@ body {
     &__secondary {
         color: $white;
         background: $secondary;
+        &:hover {
+            background-color: darken($secondary, 10%);
+        }
     }
 }
 
