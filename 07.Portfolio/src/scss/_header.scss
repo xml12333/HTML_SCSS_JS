@@ -1,0 +1,272 @@
+// Header
+
+// Navbar
+nav {
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.logo {
+    a {
+        color: white;
+    }
+}
+
+.menu {
+    display: flex;
+
+    // .menu__item
+    &__item {
+        margin-left: 25px;
+        position: relative;
+
+        &:hover {
+            &::after {
+                width: 100%;
+                transition: cubic-bezier(0.39, 0.575, 0.565, 1) .3s all;
+            }
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            width: 0;
+            background: white;
+        }
+
+        a {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #FFFFFF;
+        }
+    }
+
+    // .menu__item-link
+    &__item-link {
+        color: white;
+    }
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+// Burger menu styles
+@media screen and (max-width: $burgerBreakpoint) {
+
+    // .menu
+    .menu {
+        position: fixed;
+        background: #1b1b1b;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        display: none;
+
+        &.active {
+            display: flex;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            pointer-events: all;
+            justify-content: center;
+            align-items: center;
+            z-index: 22;
+            animation: fade 0.1s linear;
+        }
+    }
+
+    // .burger
+    .burger {
+        display: block;
+        position: relative;
+        height: 20px;
+        width: 30px;
+        z-index: 102;
+        cursor: pointer;
+
+        &.active-burger {
+            &:before {
+                background: $burgerActiveColor;
+                transform: rotate(45deg);
+                transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+                top: 8px;
+            }
+
+            &:after {
+                background: $burgerActiveColor;
+                transform: rotate(-45deg);
+                bottom: 10px;
+                transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+            }
+
+            & span {
+                transform: scale(0);
+            }
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: $burgerColor;
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        span {
+            position: absolute;
+            top: 9px;
+            right: 0;
+            width: 100%;
+            background: $burgerColor;
+            height: 2px;
+            transform: scale(1);
+            transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+        }
+    }
+
+    // .menu__item
+    .menu__item {
+        margin-top: 15px;
+        a{
+            font-size: 36px;
+        }
+    }
+
+    // .menu__link
+    .menu__item-link {
+        color: white;
+    }
+}
+
+//header
+header {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 100px;
+
+        @media (max-width: $breakpoint992) {
+            flex-wrap: wrap-reverse;
+        }
+
+        &__item {
+            flex: 0 0 50%;
+
+            @media (max-width: $breakpoint992) {
+                flex: 0 0 100%;
+            }
+
+            &.canvas__item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    @media (max-width: $breakpoint992) {
+                        width: 50%;
+                    }
+                }
+
+                @media (max-width: $breakpoint992) {
+                    margin-top: 25px;
+                }
+            }
+
+            .title {
+                padding-top: 130px;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 78px;
+                line-height: 116%;
+                color: #FFFFFF;
+                max-width: 411px;
+
+                @media (max-width: $breakpoint992) {
+                    max-width: 100%;
+                    padding-top: 25px;
+                    text-align: center;
+                    font-size: 62px;
+                }
+                @media (max-width: $breakpoint768) {
+                    font-size: 36px;
+                    line-height: 42px;
+                }
+            }
+
+            .subtitle {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 30px;
+                line-height: 137%;
+                color: #FFFFFF;
+                margin-top: 25px;
+
+                @media (max-width: $breakpoint992) {
+                    text-align: center;
+                    font-size: 26px;
+                }
+                @media (max-width: $breakpoint768) {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+            }
+
+            .info {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                column-gap: 20px;
+                max-width: 411px;
+                width: 100%;
+
+                @media (max-width: $breakpoint992) {
+                    justify-content: center;
+                    max-width: 100%;
+                }
+                @media (max-width: $breakpoint768) {
+                 margin-top: 0;
+                }
+
+                &__item {
+                    margin-top: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 21px;
+                    line-height: 150%;
+                    color: #FFFFFF;
+                    background: #1378EF;
+                    border-radius: 64px;
+                    padding: 2px 16px;
+                }
+            }
+        }
+    }
+}

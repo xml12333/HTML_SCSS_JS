@@ -1,0 +1,124 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint992) {
+        max-width: 970px;
+        padding: 0 10px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body Locked
+body {
+    font-family: 'Montserrat';
+    background: #1F1F1F;
+    &.locked {
+        overflow: hidden;
+    }
+    .overlay{
+        max-width: $containerWidth;
+        width: 100%;
+        margin: 0 auto;
+        border-left: 1px solid rgba(255,255,255,0.11);
+        border-right: 1px solid rgba(255,255,255,0.11);
+        position: relative;
+        overflow: hidden;
+        &:after{
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(255,255,255,0.11);
+            right: 33%;
+            z-index: -1;
+        }
+        &:before{
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: rgba(255,255,255,0.11);
+            left: 33%;
+            z-index: -1;
+        }
+        @media (max-width: 1300px){
+            border-left: 2px solid rgba(255,255,255,0.11);
+            border-right: 2px solid rgba(255,255,255,0.11);
+        }
+    }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+.btn {
+    background: $neutral;
+    border-radius: 4px;
+    color: #fff  ;
+    padding: 11px 24px;
+    display: inline-flex;
+    gap: 7px;
+    transition: .3s all ease;
+
+    &:hover {
+        background: $neutralDark;
+
+        svg {
+            transform: translate(10px);
+            transition: .3s all ease;
+        }
+    }
+}
+.btn__outline {
+    border-radius: 4px;
+    color: $neutral;
+    padding: 11px 24px;
+    display: inline-flex;
+    transition: .3s all ease;
+
+    &:hover {
+        color: $neutralDark;
+        transition: .3s all ease;
+    }
+}
+.section__title {
+    color: $primary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+
+    @media  (max-width: $breakpoint992) {
+        font-size: 32px;
+        line-height: 120%;
+    }
+}
+.section__subtitle {
+    color: $secondary;
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+}
