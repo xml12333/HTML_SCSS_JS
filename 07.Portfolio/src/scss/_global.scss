@@ -5,13 +5,18 @@
     margin: 0 auto;
     padding: 0 $containerSidePadding + px;
 
+    @media (max-width: 1300px) {
+        padding: 0 75px;
+    }
+
     @media (max-width: $breakpoint992) {
         max-width: 970px;
-        padding: 0 10px;
+        padding: 0 50px;
     }
 
     @media (max-width: $breakpoint768) {
         max-width: 740px;
+        padding: 0 10px;
     }
 
     @media (max-width: $breakpoint480) {
@@ -23,40 +28,45 @@
 body {
     font-family: 'Montserrat';
     background: #1F1F1F;
+
     &.locked {
         overflow: hidden;
     }
-    .overlay{
-        max-width: $containerWidth;
+
+    .overlay {
+        max-width: ($containerWidth + $containerPadding) + px;;
         width: 100%;
         margin: 0 auto;
-        border-left: 1px solid rgba(255,255,255,0.11);
-        border-right: 1px solid rgba(255,255,255,0.11);
+        border-left: 1px solid rgba(255, 255, 255, 0.11);
+        border-right: 1px solid rgba(255, 255, 255, 0.11);
         position: relative;
         overflow: hidden;
-        &:after{
+
+        &:after {
             position: absolute;
             content: '';
             top: 0;
             bottom: 0;
             width: 1px;
-            background: rgba(255,255,255,0.11);
+            background: rgba(255, 255, 255, 0.11);
             right: 33%;
             z-index: -1;
         }
-        &:before{
+
+        &:before {
             position: absolute;
             content: '';
             top: 0;
             bottom: 0;
             width: 1px;
-            background: rgba(255,255,255,0.11);
+            background: rgba(255, 255, 255, 0.11);
             left: 33%;
             z-index: -1;
         }
-        @media (max-width: 1300px){
-            border-left: 2px solid rgba(255,255,255,0.11);
-            border-right: 2px solid rgba(255,255,255,0.11);
+
+        @media (max-width: 1300px) {
+            border-left: 2px solid rgba(255, 255, 255, 0.11);
+            border-right: 2px solid rgba(255, 255, 255, 0.11);
         }
     }
 }
@@ -72,10 +82,11 @@ body {
         opacity: 1;
     }
 }
+
 .btn {
     background: $neutral;
     border-radius: 4px;
-    color: #fff  ;
+    color: #fff;
     padding: 11px 24px;
     display: inline-flex;
     gap: 7px;
@@ -90,6 +101,7 @@ body {
         }
     }
 }
+
 .btn__outline {
     border-radius: 4px;
     color: $neutral;
@@ -102,23 +114,35 @@ body {
         transition: .3s all ease;
     }
 }
-.section__title {
-    color: $primary;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
 
-    @media  (max-width: $breakpoint992) {
-        font-size: 32px;
-        line-height: 120%;
+section{
+    padding: 75px 0;
+    @media (max-width: $breakpoint768) {
+        padding: 25px 0;
     }
 }
-.section__subtitle {
-    color: $secondary;
+.section__title {
     margin-top: 15px;
     font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 55px;
+    color: #FFFFFF;
+
+    @media (max-width: $breakpoint768) {
+        font-size: 36px;
+        line-height: 40px;
+    }
+    @media (max-width: $breakpoint480) {
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+
+.section__subtitle {
+    font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 20px;
+    line-height: 170%;
+    color: #FFFFFF;
 }

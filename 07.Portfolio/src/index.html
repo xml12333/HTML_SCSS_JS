@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
-    <link rel="stylesheet" href="./css/style.min.css">
-</head>
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
 
-<body class="main__body">
-    <!-- Header -->
-    @@include('./html/_header.html')
+  <body class="main__body">
+    <div class="overlay">
+      <!-- Header -->
+      @@include('./html/_header.html')
 
-    <!-- Main Page -->
-    <main>
-        <!-- Hero -->
-        <!-- @@include('./html/_hero.html') -->
+      <!-- Main Page -->
+      <main>
+        <!-- About -->
+        @@include('./html/_about.html')
 
         <!-- Special -->
         <!-- @@include('./html/_special.html') -->
@@ -26,14 +26,12 @@
 
         <!-- Support -->
         <!-- @@include('./html/_support.html') -->
+      </main>
 
-    </main>
+      <!-- Footer -->
+      <!-- @@include('./html/_footer.html') -->
+    </div>
+  </body>
 
-    <!-- Footer -->
-    <!-- @@include('./html/_footer.html') -->
-
-</body>
-
-<script src="./js/scripts.min.js"></script>
-
+  <script src="./js/scripts.min.js"></script>
 </html>
