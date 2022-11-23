@@ -1,0 +1,173 @@
+.section__contact {
+    .contact {
+        max-width: 668px;
+        width: 100%;
+        margin: 0 auto;
+
+        // .contact__title
+        &__title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 46px;
+            line-height: 55px;
+            text-align: center;
+            color: #FFFFFF;
+
+            @media (max-width: $breakpoint768) {
+                font-size: 36px;
+                line-height: 40px;
+            }
+
+            @media (max-width: $breakpoint480) {
+                font-size: 28px;
+                line-height: 30px;
+            }
+        }
+
+        // .contact__btn
+        &__btn {
+            width: 260px;
+            height: 260px;
+            background: #1378ef;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: center;
+            color: #FFFFFF;
+            margin: 0 auto;
+            margin-top: -108px;
+
+            @media (max-width: $breakpoint768) {
+                width: 200px;
+                height: 200px;
+                margin-top: -65px;
+            }
+
+            @media (max-width: $breakpoint480) {
+                width: 150px;
+                height: 150px;
+                font-size: 14px;
+                margin-top: -40px;
+            }
+        }
+    }
+
+}
+
+// ************************ Модальное окно ************************ //
+// mf
+.modal__wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    display: none;
+
+    .modal {
+        position: relative;
+        padding: 25px;
+        max-width: 350px;
+        width: 100%;
+        background: #1f1f1f;
+
+        &__title {
+            font-family: 'Montserrat', sans-serif;
+
+            text-align: center;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 100%;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        &__close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+        }
+
+        &__body {
+            form {
+                display: flex;
+                flex-direction: column;
+
+                input {
+
+                    font-family: 'Montserrat', sans-serif;
+                    margin-top: 35px;
+                    background: none;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid #ffffff;
+                    padding: 5px 0;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 170%;
+                    color: #FFFFFF;
+
+                    &::placeholder {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 170%;
+                        color: #FFFFFF;
+                    }
+                }
+
+                textarea {
+                    font-family: 'Montserrat', sans-serif;
+                    resize: none;
+                    min-height: 75px;
+                    margin-top: 35px;
+                    background: none;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid #ffffff;
+                    padding: 5px 0;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 170%;
+                    color: #FFFFFF;
+
+                    &::placeholder {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 170%;
+                        color: #FFFFFF;
+                    }
+                }
+
+                button {
+                    font-family: 'Montserrat', sans-serif;
+
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 150%;
+                    color: #FFFFFF;
+                    border: none;
+                    background: none;
+                    outline: none;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
