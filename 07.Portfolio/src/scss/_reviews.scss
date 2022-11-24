@@ -1,0 +1,94 @@
+.section__reviews {
+    .reviews {
+        display: flex;
+        margin-top: 90px;
+        position: relative;
+        @media (max-width: $breakpoint768){
+            margin-top: 25px;
+        }
+        .arrows {
+            position: absolute;
+            bottom: 0;
+            right: 250px;
+            @media (max-width: $breakpoint1300){
+                right: -75px;
+            }
+            @media (max-width: $breakpoint992){
+                display: none;
+            }
+            .arrow__btn {
+                background: #1378ef;
+                width: 70px;
+                height: 70px;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+
+                &-prev {
+                    &:hover {
+                        .prev__arrow {
+                            margin-left: 10px;
+                            transition: .3s margin-left ease;
+                        }
+                    }
+
+                    .prev__arrow {
+                        margin-left: 35px;
+
+                    }
+                }
+
+                &-next {
+                    &:hover {
+                        .next__arrow {
+                            margin-left: 10px;
+                            transition: .3s margin-left ease;
+                        }
+                    }
+
+                    margin-left: 10px;
+                    margin-top: 10px;
+
+                    .next__arrow {
+                        margin-left: -10px;
+                    }
+                }
+            }
+        }
+
+        .swiper {
+            max-width: 860px;
+            margin: 0;
+
+            .swiper-slide {
+                background: rgba(24, 24, 24, 0.59);
+                padding: 35px 25px;
+
+                .slide__img {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .slide__title {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 170%;
+                    color: #FFFFFF;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+
+                .slide__text {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 170%;
+                    color: #FFFFFF;
+
+                }
+            }
+        }
+    }
+
+}
