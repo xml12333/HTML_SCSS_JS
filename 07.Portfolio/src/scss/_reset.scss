@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     border: 0px;
+    cursor: none;
 }
 
 *,
@@ -31,7 +32,15 @@ input::-ms-clear {
     display: none;
 }
 
+input{
+    font-family: 'Montserrat', sans-serif;
+}
+textarea{
+    font-family: 'Montserrat', sans-serif;
+}
+
 button {
+    font-family: 'Montserrat', sans-serif;
     cursor: pointer;
 }
 

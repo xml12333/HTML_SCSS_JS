@@ -160,3 +160,59 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
+//phonemask
+const element = document.querySelector(".phone__input");
+const maskOptions = {
+  mask: "+{3}(000)000-00-00",
+};
+const mask = IMask(element, maskOptions);
+
+//smooth scroll
+new SmoothScroll('a[href*="#"]');
+
+//change cursor
+function changeCursor() {
+  const cursor = document.querySelector(".cursor");
+  const follower = document.querySelector(".follower");
+  const links = document.querySelectorAll(".link");
+  let posx = 0,
+    posy = 0;
+  let mouseX = 0,
+    mouseY = 0;
+
+  TweenMax.to({}, 0.01, {
+    repeat: -1,
+    onRepeat: () => {
+      posx += (mouseX - posx) / 5;
+      posy += (mouseY - posy) / 5;
+      TweenMax.set(follower, {
+        css: {
+          left: posx - 12,
+          top: posy - 12,
+        },
+      });
+      TweenMax.set(cursor, {
+        css: {
+          left: mouseX,
+          top: mouseY,
+        },
+      });
+    },
+  });
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+  links.forEach((link) => {
+    link.addEventListener("mouseenter", () => {
+      cursor.classList.add("active");
+      follower.classList.add("active");
+    });
+    link.addEventListener("mouseleave", () => {
+      cursor.classList.remove("active");
+      follower.classList.remove("active");
+    });
+  });
+}
+changeCursor();

@@ -9,6 +9,9 @@
   </head>
 
   <body class="main__body">
+    <div class="cursor"></div>
+    <div class="follower"></div>
+    
     <div class="overlay">
       <!-- Header -->
       @@include('./html/_header.html')
@@ -27,11 +30,11 @@
         <!-- Reviews -->
         @@include('./html/_reviews.html')
       </main>
-
-      <!-- Footer -->
-      <!-- @@include('./html/_footer.html') -->
     </div>
+    <!-- Footer -->
+    @@include('./html/_footer.html')
   </body>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://unpkg.com/imask"></script>
   <script src="./js/scripts.min.js"></script>
 </html>

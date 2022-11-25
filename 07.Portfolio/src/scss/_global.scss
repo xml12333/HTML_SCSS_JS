@@ -26,7 +26,7 @@
 
 // Body Locked
 body {
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: #1F1F1F;
 
     &.locked {
@@ -34,7 +34,8 @@ body {
     }
 
     .overlay {
-        max-width: ($containerWidth + $containerPadding) + px;;
+        max-width: ($containerWidth + $containerPadding) + px;
+        ;
         width: 100%;
         margin: 0 auto;
         border-left: 1px solid rgba(255, 255, 255, 0.11);
@@ -115,12 +116,14 @@ body {
     }
 }
 
-section{
+section {
     padding: 75px 0;
+
     @media (max-width: $breakpoint768) {
         padding: 25px 0;
     }
 }
+
 .section__title {
     margin-top: 15px;
     font-style: normal;
@@ -133,6 +136,7 @@ section{
         font-size: 36px;
         line-height: 40px;
     }
+
     @media (max-width: $breakpoint480) {
         font-size: 28px;
         line-height: 30px;
@@ -145,4 +149,41 @@ section{
     font-size: 20px;
     line-height: 170%;
     color: #FFFFFF;
+}
+
+.cursor {
+    position: fixed;
+    background: #1378ef;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    user-select: none;
+    pointer-events: none;
+    z-index: 999;
+    transition: 0.3s transform;
+    transform: scale(1);
+
+    &.active {
+        transform: scale(0);
+    }
+}
+
+.follower {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #1378ef;
+    border-radius: 100%;
+    pointer-events: none;
+    user-select: none;
+    z-index: 998;
+    transition: 0.6s transform,
+        0.2s background;
+    transform: translate(2px, 2px);
+
+    &.active {
+        transform: scale(2);
+        background: #1378ef;
+        z-index: 0;
+    }
 }
