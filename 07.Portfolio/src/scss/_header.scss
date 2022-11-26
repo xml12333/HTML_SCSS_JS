@@ -197,6 +197,13 @@ header {
 
                 @media (max-width: $breakpoint992) {
                     margin-top: 25px;
+                   
+                }
+                @media (max-width: $breakpoint768){
+                    canvas{
+                        width: 250px;
+                        height: 250px;
+                    }
                 }
             }
 
